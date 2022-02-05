@@ -1,0 +1,10 @@
+*.zip
+.idea/
+*.log
+target/
+__pycache__
+*.txt
+*.clean
+*.html
+*.nohtml
+.DS_Store
