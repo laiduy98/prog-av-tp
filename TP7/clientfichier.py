@@ -10,6 +10,8 @@ s.send(sys.argv[1].encode())
 
 m = s.recv(1024)
 data = m.decode()
+with open(f'write/{sys.argv[1]}', 'w') as f:
+    f.write(data)
 print(data)
 s.close()
 

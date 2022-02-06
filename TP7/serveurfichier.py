@@ -12,10 +12,11 @@ def fonction_service(s, a):
     print(f"Service avec {a}")
     m = s.recv(1024)
     chaine = m.decode()
-    chaine_up = chaine.upper()
     print(chaine)
 
-    sservice.send(chaine_up.encode())
+    with open(chaine, 'r') as f:
+        content = f.read()
+    sservice.send(content.encode())
     time.sleep(2)
     sservice.close()
 
